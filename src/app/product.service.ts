@@ -15,9 +15,9 @@ export class ProductService {
 
   public getAlbum( id: number): Observable<Album> {
     return this._http.get(this._albumUrl).map((response) => <Album> response.json());
-  };
+  }
 
   public getProducts(): Observable<Product[]> {
-    return this._http.get(this._productsUrl).map((response) => <Product[]> response.json())
-  };
+    return this._http.get(this._productsUrl).map(response => <Product[]>response.json());
+  }
 }
